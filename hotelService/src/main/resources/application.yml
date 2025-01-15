@@ -1,0 +1,44 @@
+server:
+    port: 8082
+
+spring:
+  datasource:
+      url: jdbc:postgresql://localhost:5432/microservice
+      username: username
+      password: password
+  application:
+    name: HOTELSERVICE
+  config:
+    import: optional:configserver:http://localhost:8085
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka
+
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka
+
+
+
+#    spring.application.name=youtube-clone
+#    spring.data.mongodb.host=localhost
+#    spring.data.mongodb.port=27017
+#    spring.data.mongodb.database=youtube-clone
+#    cloud.aws.credentials.access-key=xyz
+#    cloud.aws.credentials.secret-key=def
+#    cloud.aws.credentials.region=US East (N. Virginia) us-east-1
